@@ -8,32 +8,30 @@ class Url
   include Comparable
   extend Forwardable
 
-  def initialize(uri)
-    @uri = URI uri
-  end
-
   def_delegators :@uri, :scheme, :host, :port
 
-  def query_params()
-    return {} unless @uri.query
-
-    @uri.query.split('&').each_with_object({}) do |pair, result|
-      key, value = pair.split("=")
-      result[key.to_sym] = value
+  def initialize(uri)
+    @uri = URI.parse uri
+    query = @uri.query || ''
+    @params = query
+              .split('&')
+              .each_with_object({}) do |pair, acc|
+      key, value = pair.split '='
+      acc[key.to_sym] = value
     end
   end
 
+  def query_params
+    @params
+  end
+
   def query_param(key, value = nil)
-    query_params[key] || value
+    @params.fetch key, value
   end
 
-  def ==(other_uri)
-    scheme == other_uri.scheme &&
-      host == other_uri.host &&
-      port == other_uri.port &&
-      query_params == other_uri.query_params
+  def <=>(other)
+    [scheme, host, port, query_params] <=> [other.scheme, other.host, other.port, other.query_params]
   end
-
 end
 
 # END
