@@ -45,7 +45,7 @@ module Model
   end
 
   def attributes
-    pp @attributes
+    @attributes
   end
 end
 # END
