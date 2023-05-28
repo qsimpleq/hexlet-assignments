@@ -3,7 +3,6 @@
 require_relative './model'
 
 class User
-  extend Model
   include Model
 
   attribute :name, type: :string, default: 'Andrey'

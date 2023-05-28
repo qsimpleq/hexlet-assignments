@@ -4,7 +4,6 @@ require_relative './model'
 require 'date'
 
 class Post
-  extend Model
   include Model
 
   attribute :id, type: :integer

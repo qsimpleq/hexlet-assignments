@@ -56,6 +56,6 @@ class UserTest < Minitest::Test
     user = User.new
 
     assert_equal 'Andrey', user.name
-    assert_equal ({ name: 'Andrey', active: false }), user.attributes
+    assert_equal ({ name: 'Andrey', birthday: nil, active: false }), user.attributes
   end
 end
