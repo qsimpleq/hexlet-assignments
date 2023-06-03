@@ -1,0 +1,12 @@
+require:
+  - rubocop-minitest
+  - rubocop-rake
+
+AllCops:
+  TargetRubyVersion: 3.1
+
+Layout/LineLength:
+  Max: 120
+
+Style/MethodCallWithArgsParentheses:
+  EnforcedStyle: require_parentheses
