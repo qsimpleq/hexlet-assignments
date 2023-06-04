@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'bulletins#index'
   # BEGIN
   resources :bulletins, only: %w[index show]
   # END
