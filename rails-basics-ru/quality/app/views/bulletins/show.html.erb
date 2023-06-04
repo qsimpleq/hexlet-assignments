@@ -1,0 +1,7 @@
+<%# BEGIN %>
+<h1><%= @bulletin.title %></h1>
+<% unless @bulletin.published %>
+  <h2>Не опубликован</h2>
+<% end %>
+<p><%= @bulletin.body %></p>
+<%# END %>

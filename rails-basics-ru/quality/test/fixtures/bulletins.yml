@@ -1,0 +1,17 @@
+bulletin_1:
+  id: 1
+  title: 'Bulletin 1'
+  body: 'Bulletin Body 1'
+  published: true
+
+bulletin_2:
+  id: 2
+  title: 'Bulletin 2'
+  body: 'Bulletin Body 2'
+  published: true
+
+bulletin_3:
+  id: 3
+  title: 'Bulletin 3'
+  body: 'Bulletin Body 3'
+  published: false
