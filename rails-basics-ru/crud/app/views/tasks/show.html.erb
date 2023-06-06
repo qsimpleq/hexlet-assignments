@@ -1,0 +1,19 @@
+<p>
+<div>
+  <%= link_to @task.name, task_path(@task) %>
+</div>
+<div>
+  <%= @task.description if @task.description %>
+</div>
+<div>
+  Status: <%= @task.status %>
+  <% if @task.completed %>
+    . Completed
+  <% end %>
+</div>
+<div>Creator: <%= @task.creator %></div>
+<div>Performer: <%= @task.performer %></div>
+</p>
+<div>
+  <%= render partial: 'menu', locals: { task: @task } %>
+</div>

@@ -1,0 +1,9 @@
+<%= form_with model: task do |form| %>
+  <%= form.label :name %>: <%= form.text_field :name %><br>
+  <%= form.label :status %>: <%= form.text_field :status %><br>
+  <%= form.label :creator %>: <%= form.text_field :creator %><br>
+  <%= form.label :performer %>: <%= form.text_field :performer %><br>
+  <%= form.label :completed %>: <%= form.check_box :completed, checked: @task.completed %><br>
+  <%= form.label :description %>: <%= form.text_area :description %><br>
+  <%= form.submit %>
+<% end %>
