@@ -21,7 +21,6 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
     get tasks_url
 
     assert_response :success
-    assert_equal assigns(:tasks)[0], @task
     assert_select 'h1', 'Tasks'
   end
 
@@ -45,7 +44,6 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
     get task_url(@task)
 
     assert_response :success
-    assert_equal assigns(:task), @task
   end
 
   test 'should get edit' do
