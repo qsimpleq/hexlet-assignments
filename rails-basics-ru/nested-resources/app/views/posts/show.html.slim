@@ -1,0 +1,24 @@
+- content_for :title do
+  = @post.title
+p
+  strong.me-2 Body:
+  = @post.body
+
+hr
+
+.d-flex
+  = link_to 'Edit', edit_post_path(@post), class: 'btn btn-outline-primary me-2'
+  = link_to 'Back', :back, class: 'btn btn-outline-primary'
+
+hr
+/ BEGIN
+.d-flex
+  = link_to 'New comment', new_post_comment_path(@post), class: 'btn btn-outline-primary me-2'
+hr
+.table
+  - @post.post_comments.each do |post_comment|
+    == render post_comment
+    p
+      = link_to "Show this post comment", post_comment
+
+/ END
