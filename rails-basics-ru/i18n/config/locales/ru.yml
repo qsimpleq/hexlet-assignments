@@ -1,0 +1,23 @@
+ru:
+  back: Назад
+  destroy: Удалить
+  destroy_confirmation: Вы уверены?
+  edit: Редактировать
+  helpers:
+    submit:
+      post:
+        create: "Создать Пост"
+        update: "Сохранить Пост"
+        destroy: "Удалить Пост"
+
+  home:
+    index:
+      home_page: Домашняя страница
+  layouts:
+    application:
+      hexlet_title: © Хекслет
+    shared:
+      nav:
+        home: Домой
+        posts: Посты
+  show: Показать

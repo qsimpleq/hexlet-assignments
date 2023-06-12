@@ -1,0 +1,34 @@
+# Файлы локалей можно разделить
+ru:
+  activerecord:
+    attributes:
+      user:
+        first_name: Имя
+      post:
+        title: Название
+
+    # Переводы названий моделей
+    models:
+      # Плюрализация (множественное и единственное число в переводах)
+      user:
+        one: Пользователь
+        other: Пользователи
+
+    # Переводы ошибок валидации
+    errors:
+      models:
+        post/comment:
+          attributes:
+            body:
+              blank: Должно быть заполнено
+        post:
+          attributes:
+            title:
+              blank: Должно быть заполнено
+            body:
+              blank: Должно быть заполнено
+        user:
+          attributes:
+            first_name:
+              # Имя атрибута не подставляем, оно будет вставлено автоматически
+              blank: Должно быть заполнено
