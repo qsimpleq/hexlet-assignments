@@ -11,7 +11,8 @@ class SetLocaleMiddleware
   end
 
   def _call(env)
-    locale = env['HTTP_ACCEPT_LANGUAGE']&.downcase&.to_sym
+    locale = env['HTTP_ACCEPT_LANGUAGE']&.split(/,(s+)?/)&.map(&:strip)
+    locale = locale[0][0..2]&.to_sym if locale
     I18n.locale = if !locale.nil? && I18n.available_locales.include?(locale)
                     locale
                   else
