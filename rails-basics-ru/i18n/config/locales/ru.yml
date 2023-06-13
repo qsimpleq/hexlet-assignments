@@ -3,13 +3,6 @@ ru:
   destroy: Удалить
   destroy_confirmation: Вы уверены?
   edit: Редактировать
-  helpers:
-    submit:
-      post:
-        create: "Создать Пост"
-        update: "Сохранить Пост"
-        destroy: "Удалить Пост"
-
   home:
     index:
       home_page: Домашняя страница
@@ -20,4 +13,5 @@ ru:
       nav:
         home: Домой
         posts: Посты
+        hexlet_logo: Хекслет лого
   show: Показать

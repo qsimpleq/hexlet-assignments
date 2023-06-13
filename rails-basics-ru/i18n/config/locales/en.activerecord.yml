@@ -2,19 +2,16 @@ en:
   activerecord:
     attributes:
       # BEGIN
-      user:
-        first_name: Name
       post:
         title: Title
+        body: Body
       # END
       post/comment:
         body: Body
 
     models:
       # BEGIN
-      user:
-        one: User
-        other: Users
+      post: Post
       # END
       post/comment: Comment
 

@@ -24,6 +24,10 @@ en:
 
     destroy:
       success: Post was destroyed.
+
+    show:
+      body: Body
+      comments: Comments
     # END
 
     comments:

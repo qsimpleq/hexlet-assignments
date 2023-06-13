@@ -4,8 +4,8 @@ ru:
     attributes:
       user:
         first_name: Имя
-      post:
-        title: Название
+#      post:
+#        title: Название
 
     # Переводы названий моделей
     models:
