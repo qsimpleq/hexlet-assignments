@@ -14,6 +14,8 @@ class Web::RepositoriesControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Repository.count') do
       post repositories_path, params: { repository: { link: } }
     end
+
+    assert_response :redirect
   end
   # END
 end
