@@ -5,5 +5,5 @@
   - @articles.each do |article|
     / BEGIN
     = cache article do
-      = render partial: 'article'
+      = render partial: 'article', locals: { article: }
     / END
